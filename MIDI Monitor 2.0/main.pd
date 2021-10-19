@@ -516,11 +516,11 @@
 #X obj 396 54 t b;
 #X obj 396 75 f 0;
 #X obj 369 54 f 1;
-#X obj 228 132 spigot 0, f 24;
-#X obj 228 34 r aux;
-#X obj 228 58 + 1;
-#X obj 277 58 f;
-#X obj 228 84 % 2;
+#X obj 228 121 spigot 0, f 24;
+#X obj 228 15 r aux;
+#X obj 228 39 + 1;
+#X obj 277 39 f;
+#X obj 228 65 % 2;
 #X msg 227 437 /oled/gFlip 3;
 #X obj 389 487 s oscOut;
 #X obj 345 269 midiout;
@@ -540,6 +540,7 @@
 #X obj 540 88 t b b b b, f 13;
 #X msg 540 180 /oled/gPrintln 3 60 55 8 1 - - -;
 #X msg 565 155 /oled/gFillArea 3 60 55 33 9 0;
+#X obj 228 94 change;
 #X connect 0 0 1 0;
 #X connect 1 0 4 0;
 #X connect 1 0 25 0;
@@ -552,7 +553,7 @@
 #X connect 7 0 8 0;
 #X connect 7 0 9 0;
 #X connect 8 0 7 1;
-#X connect 9 0 5 0;
+#X connect 9 0 29 0;
 #X connect 10 0 11 0;
 #X connect 13 0 12 0;
 #X connect 14 0 12 0;
@@ -575,6 +576,7 @@
 #X connect 26 3 20 0;
 #X connect 27 0 23 0;
 #X connect 28 0 23 0;
+#X connect 29 0 5 0;
 #X restore 612 487 pd midi-transport;
 #X msg 255 97 /oled/gLine 3 94 8 94 62 1;
 #X connect 2 0 3 0;
